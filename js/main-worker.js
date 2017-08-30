@@ -212,7 +212,7 @@ $(function(){
             $('.review .title-section').css("margin-top", -(h + 200) - 202);
             console.log(-(h + 200) - 196);
         }
-        
+
     }
 
     function init(){
