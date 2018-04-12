@@ -1,6 +1,5 @@
 $(function(){
-    var mobileMenuValue = 1024;
-    var isMobile = ($(window).width() <= mobileMenuValue);
+    var isMobile = true;
 
     var previousScroll = 10;
 
@@ -8,6 +7,8 @@ $(function(){
     var menu = $('.main-nav-menu');
     var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
     var horizontalBox = $(".horizontal-box").find(".card");
+
+    var mobileMenuValue = 1024;
 
     var LINES_NUM = 4;
     var MOB_LINES_NUM = 2;
@@ -159,7 +160,6 @@ $(function(){
             isMobile = false;
             menu.show();
         }
-        getHeightOfReviews();
         menuOpacity();
         lines();
     }
@@ -200,19 +200,10 @@ $(function(){
     }
 
     function getHeightOfReviews(){
-        if(!isMobile) {
-            var h = $('.cards-review').height();
-            $('.review .dot-block').css("height", (h - 800)).css("margin-top", (-h + 520));
-            $('.review .lines-block').css("height", h + 282);
-            $('.review .title-section').css("margin-top", -(h + 282) - 260);
-        }
-        else{
-            var h = $('.cards-review').height();
-            $('.review .lines-block').css("height", h + 205);
-            $('.review .title-section').css("margin-top", -(h + 200) - 202);
-            console.log(-(h + 200) - 196);
-        }
-
+        var h = $('.cards-review').height();
+        $('.review .dot-block').css("height", (h - 800)).css("margin-top", (-h + 520));
+        $('.review .lines-block').css("height", h + 350);
+        $('.review .title-section').css("margin-top", -(h + 350) - 260);
     }
 
     function init(){

@@ -15,8 +15,6 @@ Required ruby-gems:
 
 **jekyll serve** - command that run jekyll in watch mode (localhost:4000)
 
-**jekyll serve --host=0.0.0.0** - command that run jekyll in watch mode for all users in network (<your ip address>:4000)
-
 
  All plugins store in _plugins folder. Some of them can store default setting in config files _config.yml
 
